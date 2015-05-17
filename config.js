@@ -11,7 +11,7 @@ System.config({
     "*": "dist/*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js",
-    "aurelia-skeleton-navigation/*": "dist/*.js"
+    "ushr-au/*": "dist/*.js"
   }
 });
 
@@ -19,6 +19,7 @@ System.config({
   "map": {
     "aurelia-animator-css": "github:aurelia/animator-css@0.2.0",
     "aurelia-bootstrapper": "github:aurelia/bootstrapper@0.12.0",
+    "aurelia-computed": "github:jdanyow/aurelia-computed@0.1.1",
     "aurelia-dependency-injection": "github:aurelia/dependency-injection@0.7.1",
     "aurelia-event-aggregator": "github:aurelia/event-aggregator@0.4.0",
     "aurelia-framework": "github:aurelia/framework@0.11.0",
@@ -135,6 +136,11 @@ System.config({
       "aurelia-metadata": "github:aurelia/metadata@0.5.0",
       "aurelia-path": "github:aurelia/path@0.6.1",
       "aurelia-task-queue": "github:aurelia/task-queue@0.4.0",
+      "core-js": "npm:core-js@0.9.10"
+    },
+    "github:jdanyow/aurelia-computed@0.1.1": {
+      "aurelia-binding": "github:aurelia/binding@0.6.1",
+      "aurelia-logging": "github:aurelia/logging@0.4.0",
       "core-js": "npm:core-js@0.9.10"
     },
     "github:jspm/nodelibs-assert@0.1.0": {
