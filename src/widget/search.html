@@ -1,0 +1,12 @@
+<template>
+  <form role="form" submit.delegate="search()">
+    <div class="input-group">
+      <input type="text" class="form-control input-lg" value.bind="query" keyup.delegate="update()" placeholder.one-way="placeholder">
+      <span class="input-group-btn">
+        <button type="button" click.delegate="search()" class="btn btn-primary btn-lg">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</template>
