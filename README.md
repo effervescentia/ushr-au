@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/effervescentia/ushr-au.svg?branch=master)](https://travis-ci.org/effervescentia/ushr-au)
 
+Running [here](http://ushr.benteichman.ca/)
+
 # ushr-au
 
 This app uses the [Aurelia](http://www.aurelia.io/) platform.
