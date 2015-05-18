@@ -1,8 +1,12 @@
 <template>
+  <link rel="stylesheet" type="text/css" href="styles/jumbosearch.css">
   <require from="widget/search"></require>
 
-  <div class="jumbosearch">
-    <h2>${label} ${search.suggest}</h2>
-    <search ref.view-model="search"></search>
+  <div class="jumbocontainer">
+    <div class="background" style.bind="styleObject"></div>
+    <content select="h2"></content>
+    <div class="jumbosearch">
+      <content select="search"></content>
+    </div>
   </div>
 </template>

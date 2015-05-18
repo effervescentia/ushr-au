@@ -1,8 +1,11 @@
 <template>
-  <section class="au-animate" css="background: url(${jumbosearch.imageUrl}) center no-repeat;">
+  <require from="widget/jumbosearch"></require>
+  <require from="widget/search"></require>
 
-    <require from="widget/jumbosearch"></require>
-
-    <jumbosearch ref.view-model="jumbosearch"></jumbosearch>
+  <section class="au-animate">
+    <jumbosearch ref.view-model="jumbo">
+      <h2>${jumbo.label} ${search.suggest}</h2>
+      <search cbobject.bind="jumbo" ref.view-model="search"></search>
+    </jumbosearch>
   </section>
 </template>

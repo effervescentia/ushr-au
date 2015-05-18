@@ -4,19 +4,6 @@ body {
 .au-animate {
   height: 100%;
 }
-.jumbosearch {
-  padding-left: 25%;
-  padding-right: 25%;
-  padding-top: 20%
-  /*position: relative;
-  top: 50%;
-  transform: translateY(-50%);*/
-}
-.jumbosearch h2 {
-  height: 40px;
-  text-align: center;
-  color: #ddd;
-}
 .splash {
   text-align: center;
   margin: 10% 0 0 0;

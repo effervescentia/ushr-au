@@ -1,19 +1,19 @@
-import {customElement, inject} from 'aurelia-framework';
-import {EventAggregator} from 'aurelia-event-aggregator';
+import {customElement, inject, bindable} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 import JSONSelect from 'jsonselect';
 
+var _url = 'http://localhost:8000/locations?query=';
+
 @customElement('search')
-@inject(HttpClient, EventAggregator)
+@inject(HttpClient)
 export class Search {
+  @bindable cbobject;
   updatable = true;
   suggest = '...';
   placeholder = 'Enter your city';
-  url = 'http://localhost:8000/locations?query=';
 
-  constructor(http, aggregator) {
+  constructor(http) {
     this.http = http;
-    this.aggregator = aggregator;
   }
 
   search() {
@@ -22,13 +22,15 @@ export class Search {
 
   update() {
     if (this.updatable && this.query.trim().length > 0) {
-      return this.http.jsonp(this.url + this.query).then(response => {
+      return this.http.jsonp(_url + this.query).then(response => {
         try {
           this.autocomplete = JSONSelect.match('.predictions .description', response.content[0]);
           var details = this.autocomplete[0].split(',');
           var relevant = details.slice(0, details.length - 1);
-          this.suggest = relevant.join(", ");
-          this.aggregator.publish('search_suggest', details);
+          this.suggest = relevant.join(",");
+          if (this.cbobject) {
+            this.cbobject.callback(this.suggest);
+          }
         } catch (e) {
           this.updatable = false;
           console.log('Update failed, waiting to avoid spam updates');
