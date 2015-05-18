@@ -2,7 +2,7 @@ import {customElement, inject, bindable} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 import JSONSelect from 'jsonselect';
 
-var _url = 'http://localhost:8000/locations?query=';
+var _url = '/locations?query=';
 
 @customElement('search')
 @inject(HttpClient)
