@@ -27,8 +27,22 @@ export class JumboSearch {
 
   updateStyle(response) {
     this.images = JSONSelect.match('.responseData .results .url', response.content);
+    this.imageUrl = this.images[0];
+    // this.nextStyleObject = {
+    //   'background-image': `url(${this.images[3]})`,
+    //   'z-index': 1
+    // };
     this.styleObject = {
+      'z-index': 2,
       'background-image': `url(${this.images[0]})`
+      // '-webkit-animation': 'wipe 2s linear'
     };
+    // setTimeout(function(jumbosearch) {
+    //   jumbosearch.styleObject = {
+    //     'background-image': `url(${jumbosearch.images[3]})`,
+    //     '-webkit-clip-path': 'polygon(0 0, 100% 100%, 100% 100%, 0 100%)',
+    //     'z-index': 2
+    //   };
+    // }, 2000, this);
   }
 }

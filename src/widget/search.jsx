@@ -4,6 +4,11 @@ import JSONSelect from 'jsonselect';
 
 var _url = '/locations?query=';
 
+// @exclude
+// DEV ONLY
+_url = 'http://localhost:8000' + _url;
+// @endexclude
+
 @customElement('search')
 @inject(HttpClient)
 export class Search {

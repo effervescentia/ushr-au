@@ -3,7 +3,10 @@
   <require from="widget/search"></require>
 
   <div class="jumbocontainer">
-    <div class="background" style.bind="styleObject"></div>
+    <div class="background">
+      <div class="jumboimage" style.bind="styleObject"></div>
+      <div class="jumboimage" style.bind="nextStyleObject"></div>
+    </div>
     <content select="h2"></content>
     <div class="jumbosearch">
       <content select="search"></content>

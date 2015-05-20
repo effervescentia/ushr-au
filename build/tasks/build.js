@@ -12,8 +12,8 @@ var assign = Object.assign || require('object.assign');
 // the plumber() call prevents 'pipe breaking' caused
 // by errors from other gulp plugins
 // https://www.npmjs.com/package/gulp-plumber
-gulp.task('build-system', function () {
-  return gulp.src(paths.source)
+gulp.task('build-system', ['pre-system'], function (callback) {
+  return gulp.src(paths.interSource)
     .pipe(plumber())
     .pipe(changed(paths.output, {
       extension: '.jsx'
@@ -32,8 +32,8 @@ gulp.task('build-system', function () {
 });
 
 // copies changed html files to the output directory
-gulp.task('build-html', function () {
-  return gulp.src(paths.html)
+gulp.task('build-html', ['pre-html'], function (callback) {
+  return gulp.src(paths.interHtml)
     .pipe(changed(paths.output, {
       extension: '.html'
     }))

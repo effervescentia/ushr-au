@@ -1,6 +1,7 @@
 var path = require('path');
 
 var appRoot = 'src/';
+var intRoot = 'inter/';
 var outputRoot = 'dist/';
 
 module.exports = {
@@ -8,6 +9,9 @@ module.exports = {
   source: appRoot + '**/*.jsx',
   html: appRoot + '**/*.html',
   style: 'styles/**/*.css',
+  interSource: intRoot + '**/*.jsx',
+  interHtml: intRoot + '**/*.html',
+  inter: intRoot,
   output: outputRoot,
   sourceMapRelativePath: '../' + appRoot,
   doc: './doc',
