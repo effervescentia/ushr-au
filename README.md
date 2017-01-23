@@ -4,6 +4,8 @@ Running [here](http://ushr.benteichman.ca/)
 
 # ushr-au
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/effervescentia/ushr-au.svg)](https://greenkeeper.io/)
+
 This app uses the [Aurelia](http://www.aurelia.io/) platform.
 
 ## Running The App
